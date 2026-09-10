@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+   <meta charset="utf-8">
+   <title>Converter Temperatura</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <form action="/converter_temperatura" method="POST">
+       <label>Digite o total de celsius para converter em fahrenheit: </label>
+       <input type=number name="celsius" id="celsius" placeholder="Ex.: 35">
+       <button type="submit">Converter</button>
+   </form>
+   <div class="resultado">
+       <h2><strong>{{ celsius }}ºC = {{ fh }}ºF</strong></h2>
+   </div>
+</body>
+</html>

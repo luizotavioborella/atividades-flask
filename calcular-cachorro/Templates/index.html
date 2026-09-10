@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+   <meta charset="utf-8">
+   <title>Converter Idade de Cachorro</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <form action="/converter_idade" method="POST">
+       <label>Digite a idade do cachorro para converter para a idade humana: </label>
+       <input type=number name="idade" id="idade" placeholder="Ex.: 5">
+       <button type="submit">Converter</button>
+   </form>
+   <div class="resultado">
+       <h2><strong>{{ idade }} anos de cachorro em anos humanos é de {{ convert }} anos</strong></h2>
+   </div>
+</body>
+</html>

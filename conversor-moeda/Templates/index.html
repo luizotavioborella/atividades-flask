@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+   <meta charset="utf-8">
+   <title>Converter Moeda</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <form action="/converter_moeda" method="POST">
+       <label>Digite o total de reais para converter em dólares: </label>
+       <input type=number name="reais" id="reais" placeholder="Ex.: 10">
+       <button type="submit">Converter</button>
+   </form>
+   <div class="resultado">
+       <h2><strong>R${{ reais }} = ${{ dolares }}</strong></h2>
+   </div>
+</body>
+</html>
